@@ -1,4 +1,5 @@
 // Soup's YouTube Ad Skipper
+// GitHub: https://github.com/the-can-of-soup/soup_yt_ad_skipper
 // 
 // Paste this script into this website if you want a bookmarklet:
 // https://chriszarate.github.io/bookmarkleter/
@@ -13,6 +14,7 @@ function soup_auto_skipper() {
   // Check if on YouTube
   if (!window.location.href.startsWith('https://www.youtube.com')) {
     alert('Soup\'s YouTube Ad Skipper can only be embedded when YouTube is selected.');
+    return;
   }
 
   // Create buttons

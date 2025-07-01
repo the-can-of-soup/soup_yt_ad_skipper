@@ -34,7 +34,14 @@ function soup_auto_skipper() {
   // Skip functionality
   var skip_function = function() {
     if (document.getElementsByClassName('ytp-ad-badge__text--clean-player')[0] != null) {
-      var video_player = document.getElementsByClassName('html5-main-video')[0];
+      var video_players = document.getElementsByClassName('html5-main-video');
+      var video_player = video_players[0];
+      for (let i = 0; i < video_players.length; i++) {
+        if (!Number.isNaN(video_players[i].length)) {
+          video_player = video_players[i];
+          break;
+        }
+      }
       video_player.currentTime = video_player.duration;
     }
   }

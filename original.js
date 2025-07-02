@@ -37,7 +37,7 @@ function soup_auto_skipper() {
       var video_players = document.getElementsByClassName('html5-main-video');
       var video_player = video_players[0];
       for (let i = 0; i < video_players.length; i++) {
-        if (!Number.isNaN(video_players[i].length)) {
+        if (!Number.isNaN(video_players[i].duration)) {
           video_player = video_players[i];
           break;
         }
